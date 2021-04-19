@@ -7,8 +7,6 @@ Resource    ../resources/camunda.resource
 *** Variables ***
 ${CAMUNDA_HOST}    http://localhost:8080
 ${TOPIC}    download_excel.robot
-${WORKLOAD}    ${EMPTY}
-${EXCEL_FILE}    ${EMPTY}
 
 
 *** Tasks ***

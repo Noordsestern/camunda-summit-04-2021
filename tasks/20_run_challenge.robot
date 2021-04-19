@@ -13,7 +13,7 @@ ${CAMUNDA_HOST}    http://localhost:8080
 
 *** Tasks ***
 Fill The Forms
-    ${people}=    Get The List Of People From The Excel File
+    ${people}    Get The List Of People From The Excel File
     Start The Challenge
     FOR    ${person}    IN    @{people}
         Fill And Submit The Form    ${person}
@@ -22,16 +22,16 @@ Fill The Forms
 
 
 *** Keywords ***
-Start The Challenge
-    Open Available Browser    http://rpachallenge.com/
-    Click Button    Start
-
 Get The List Of People From The Excel File
     ${excel_file}    Download file from variable    data
     Open Workbook    ${excel_file}
-    ${table}=    Read Worksheet As Table    header=True
+    ${table}    Read Worksheet As Table    header=True
     Close Workbook
     [Return]    ${table}
+
+Start The Challenge
+    Open Available Browser    http://rpachallenge.com/
+    Click Button    Start
 
 Fill And Submit The Form
     [Arguments]    ${person}
