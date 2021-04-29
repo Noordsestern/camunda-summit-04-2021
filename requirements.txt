@@ -1,2 +1,3 @@
-robotframework-camunda
-rpaframework
+robotframework-camunda==1.2.2
+rpaframework==9.5.0
+robotframework==4.0
