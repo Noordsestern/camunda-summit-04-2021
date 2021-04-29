@@ -19,6 +19,7 @@ Fill The Forms
         Fill And Submit The Form    ${person}
     END
     Collect The Results
+    Complete Task
 
 
 *** Keywords ***
